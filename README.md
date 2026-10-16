@@ -268,7 +268,32 @@ FlowSprint attaches a real WebSocket server to the Node HTTP instance on port 30
 
 ---
 
-## 📦 Production Build & Deployment
+## 🚀 Deploying to Render
+
+You can easily deploy FlowSprint as a **Web Service** on Render:
+
+1. **Create a New Web Service:**
+   - Connect your GitHub repository on [Render Dashboard](https://dashboard.render.com/).
+   - Select **Web Service**.
+
+2. **Configure Service Settings:**
+   | Field | Value |
+   | :--- | :--- |
+   | **Runtime** | `Node` |
+   | **Root Directory** | *(Leave blank or enter `.`) |
+   | **Build Command** | `npm install && npm run build` |
+   | **Start Command** | `npm start` |
+
+3. **Environment Variables (Optional):**
+   - In the **Environment Variables** tab, you can add:
+     - `MONGODB_URI`: Your MongoDB Atlas connection string.
+     - `NODE_ENV`: `production`
+
+4. Click **Deploy Web Service**! Render will automatically install dependencies, build the frontend with Vite, and launch the Express + WebSockets full-stack server.
+
+---
+
+## 📦 Production Build & Run Locally
 
 To build the optimized production assets:
 ```bash
