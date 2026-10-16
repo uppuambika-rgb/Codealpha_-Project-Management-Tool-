@@ -282,7 +282,7 @@ You can easily deploy FlowSprint as a **Web Service** on Render:
    | **Runtime** | `Node` |
    | **Root Directory** | *(Leave blank or enter `.`) |
    | **Build Command** | `npm install && npm run build` |
-   | **Start Command** | `npm start` |
+   | **Start Command** | `node server.js` *(or `npm start`)* |
 
 3. **Environment Variables (Optional):**
    - In the **Environment Variables** tab, you can add:

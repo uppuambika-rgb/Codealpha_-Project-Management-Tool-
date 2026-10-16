@@ -1,5 +1,5 @@
 import mongoose, { Schema } from 'mongoose';
-import {
+import type {
   User,
   Project,
   Task,

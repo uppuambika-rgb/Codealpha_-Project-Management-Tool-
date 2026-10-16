@@ -1,8 +1,8 @@
 import { Router, Response } from 'express';
 import crypto from 'crypto';
 import { db } from '../db.ts';
-import { authenticate, AuthenticatedRequest } from '../auth.ts';
-import { Task, TaskPriority, TaskStatus, Notification } from '../types.ts';
+import { authenticate, type AuthenticatedRequest } from '../auth.ts';
+import type { Task, TaskPriority, TaskStatus, Notification } from '../types.ts';
 import { wsManager } from '../websocket.ts';
 
 const router = Router();

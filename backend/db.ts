@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
-import {
+import type {
   DatabaseSchema,
   User,
   SafeUser,
@@ -535,6 +535,29 @@ class Database {
           ActivityModel.find().lean(),
         ]);
 
+        let finalProjects = projects;
+        let finalTasks = tasks;
+        let finalComments = comments;
+        let finalNotifications = notifications;
+        let finalActivities = activities;
+
+        if (projects.length === 0 && this.data.projects.length > 0) {
+          console.log('🌱 Seeding initial showcase projects and tasks into MongoDB...');
+          await Promise.all([
+            ProjectModel.insertMany(this.data.projects),
+            TaskModel.insertMany(this.data.tasks),
+            CommentModel.insertMany(this.data.comments),
+            NotificationModel.insertMany(this.data.notifications),
+            ActivityModel.insertMany(this.data.activities),
+          ]);
+          finalProjects = (await ProjectModel.find().lean()) as any;
+          finalTasks = (await TaskModel.find().lean()) as any;
+          finalComments = (await CommentModel.find().lean()) as any;
+          finalNotifications = (await NotificationModel.find().lean()) as any;
+          finalActivities = (await ActivityModel.find().lean()) as any;
+          console.log('✓ Seeded projects and tasks into MongoDB.');
+        }
+
         this.data = {
           users: users.map((u: any) => ({
             id: u.id,
@@ -547,7 +570,7 @@ class Database {
             title: u.title,
             createdAt: u.createdAt,
           })),
-          projects: projects.map((p: any) => ({
+          projects: finalProjects.map((p: any) => ({
             id: p.id,
             name: p.name,
             description: p.description,
@@ -558,7 +581,7 @@ class Database {
             createdAt: p.createdAt,
             updatedAt: p.updatedAt,
           })),
-          tasks: tasks.map((t: any) => ({
+          tasks: finalTasks.map((t: any) => ({
             id: t.id,
             projectId: t.projectId,
             title: t.title,
@@ -573,7 +596,7 @@ class Database {
             createdAt: t.createdAt,
             updatedAt: t.updatedAt,
           })),
-          comments: comments.map((c: any) => ({
+          comments: finalComments.map((c: any) => ({
             id: c.id,
             taskId: c.taskId,
             projectId: c.projectId,
@@ -583,7 +606,7 @@ class Database {
             content: c.content,
             createdAt: c.createdAt,
           })),
-          notifications: notifications.map((n: any) => ({
+          notifications: finalNotifications.map((n: any) => ({
             id: n.id,
             userId: n.userId,
             title: n.title,
@@ -593,7 +616,7 @@ class Database {
             link: n.link,
             createdAt: n.createdAt,
           })),
-          activities: activities.map((a: any) => ({
+          activities: finalActivities.map((a: any) => ({
             id: a.id,
             projectId: a.projectId,
             userId: a.userId,

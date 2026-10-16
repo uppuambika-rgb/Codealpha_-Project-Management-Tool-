@@ -1,8 +1,8 @@
 import { Router, Response } from 'express';
 import crypto from 'crypto';
 import { db, hashPassword, generateSalt } from '../db.ts';
-import { generateToken, authenticate, AuthenticatedRequest } from '../auth.ts';
-import { User } from '../types.ts';
+import { generateToken, authenticate, type AuthenticatedRequest } from '../auth.ts';
+import type { User } from '../types.ts';
 
 const router = Router();
 
