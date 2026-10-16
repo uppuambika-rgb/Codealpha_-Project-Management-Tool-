@@ -629,6 +629,27 @@ var Database = class {
           NotificationModel.find().lean(),
           ActivityModel.find().lean()
         ]);
+        let finalProjects = projects;
+        let finalTasks = tasks;
+        let finalComments = comments;
+        let finalNotifications = notifications;
+        let finalActivities = activities;
+        if (projects.length === 0 && this.data.projects.length > 0) {
+          console.log("\u{1F331} Seeding initial showcase projects and tasks into MongoDB...");
+          await Promise.all([
+            ProjectModel.insertMany(this.data.projects),
+            TaskModel.insertMany(this.data.tasks),
+            CommentModel.insertMany(this.data.comments),
+            NotificationModel.insertMany(this.data.notifications),
+            ActivityModel.insertMany(this.data.activities)
+          ]);
+          finalProjects = await ProjectModel.find().lean();
+          finalTasks = await TaskModel.find().lean();
+          finalComments = await CommentModel.find().lean();
+          finalNotifications = await NotificationModel.find().lean();
+          finalActivities = await ActivityModel.find().lean();
+          console.log("\u2713 Seeded projects and tasks into MongoDB.");
+        }
         this.data = {
           users: users.map((u) => ({
             id: u.id,
@@ -641,7 +662,7 @@ var Database = class {
             title: u.title,
             createdAt: u.createdAt
           })),
-          projects: projects.map((p) => ({
+          projects: finalProjects.map((p) => ({
             id: p.id,
             name: p.name,
             description: p.description,
@@ -652,7 +673,7 @@ var Database = class {
             createdAt: p.createdAt,
             updatedAt: p.updatedAt
           })),
-          tasks: tasks.map((t) => ({
+          tasks: finalTasks.map((t) => ({
             id: t.id,
             projectId: t.projectId,
             title: t.title,
@@ -667,7 +688,7 @@ var Database = class {
             createdAt: t.createdAt,
             updatedAt: t.updatedAt
           })),
-          comments: comments.map((c) => ({
+          comments: finalComments.map((c) => ({
             id: c.id,
             taskId: c.taskId,
             projectId: c.projectId,
@@ -677,7 +698,7 @@ var Database = class {
             content: c.content,
             createdAt: c.createdAt
           })),
-          notifications: notifications.map((n) => ({
+          notifications: finalNotifications.map((n) => ({
             id: n.id,
             userId: n.userId,
             title: n.title,
@@ -687,7 +708,7 @@ var Database = class {
             link: n.link,
             createdAt: n.createdAt
           })),
-          activities: activities.map((a) => ({
+          activities: finalActivities.map((a) => ({
             id: a.id,
             projectId: a.projectId,
             userId: a.userId,
