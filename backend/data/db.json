@@ -1,0 +1,458 @@
+{
+  "users": [
+    {
+      "id": "user_alex",
+      "name": "Alex Rivers",
+      "email": "alex@campus.edu",
+      "passwordHash": "85a1998eb5d0f551f8d45fa52ac7101c36f5320e715927c272c45a670c64cb8cbebf1b6fb3b35a876b2976f71ce00bd0cffe441a05037ad01f3e6e460f208deb",
+      "salt": "976bbd44fa364e7fa074f366187c80ac",
+      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80",
+      "department": "Computer Science",
+      "title": "Team Lead & Full-Stack",
+      "createdAt": "2026-09-15T03:26:59.024Z"
+    },
+    {
+      "id": "user_maya",
+      "name": "Maya Chen",
+      "email": "maya@campus.edu",
+      "passwordHash": "16868ad9d5315aec8a04a5ed4ad48d3025e26154081e9d364b23299439bcbb0aad7339e59191112001833391e0e99913fbeea534ba2bbf349e783293df1fc51b",
+      "salt": "cddae5071f3f201b770a49e9c2f89670",
+      "avatarUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80",
+      "department": "Design & HCI",
+      "title": "UI/UX & Frontend Specialist",
+      "createdAt": "2026-09-20T03:26:59.025Z"
+    },
+    {
+      "id": "user_liam",
+      "name": "Liam Vance",
+      "email": "liam@campus.edu",
+      "passwordHash": "da5940ad32ce229c2d11c70e31b6f66e7996204ca3b80dd4d4cb7c91455b3828f278c68b735dc88127bdb3d659d1f0f725fb8d5ed4c357ed86a8f6af7a560092",
+      "salt": "e6fd80c98d313c423dae38ecb23debd5",
+      "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
+      "department": "Software Engineering",
+      "title": "Backend & Cloud Architect",
+      "createdAt": "2026-09-25T03:26:59.026Z"
+    },
+    {
+      "id": "user_sophia",
+      "name": "Sophia Patel",
+      "email": "sophia@campus.edu",
+      "passwordHash": "50c8320512cc41a48e30f1e65c5961b4bd5109b823377d375cf1cdefe03edcd105f51e39fbf763e631f704f3147f201c98ba33fee179f9db2681a0564dcaadd3",
+      "salt": "920b3b6f7763f0ecd9d6d0fd0088e097",
+      "avatarUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80",
+      "department": "Information Systems",
+      "title": "QA & Product Specialist",
+      "createdAt": "2026-09-30T03:26:59.027Z"
+    },
+    {
+      "id": "user_1792113971610_8a358a",
+      "name": "Ambika Uppu",
+      "email": "testambika@campus.edu",
+      "passwordHash": "8d8073d3b0fb989602996bf06ac78dee24f4547a70ac6a00a86e467eb2020616b7ea4a308e07fc3d8b34f113f0e13cfff3de66beea0b5220670389fe35b8b15a",
+      "salt": "a4ca4d76ae2696f7f920216bd0008982",
+      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=Ambika%20Uppu&backgroundColor=10b981,059669,047857",
+      "department": "Computer Science",
+      "title": "Project Lead",
+      "createdAt": "2026-10-16T01:26:11.611Z"
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj_campuseats",
+      "name": "Campus Eats - Food Delivery",
+      "description": "On-demand campus meal ordering platform connecting university dining halls and local cafes with students.",
+      "ownerId": "user_alex",
+      "color": "emerald",
+      "tag": "CAPSTONE-01",
+      "members": [
+        {
+          "userId": "user_alex",
+          "role": "lead",
+          "joinedAt": "2026-09-25T03:26:59.027Z"
+        },
+        {
+          "userId": "user_maya",
+          "role": "member",
+          "joinedAt": "2026-09-27T03:26:59.027Z"
+        },
+        {
+          "userId": "user_liam",
+          "role": "member",
+          "joinedAt": "2026-09-27T03:26:59.027Z"
+        },
+        {
+          "userId": "user_sophia",
+          "role": "member",
+          "joinedAt": "2026-09-30T03:26:59.027Z"
+        }
+      ],
+      "createdAt": "2026-09-25T03:26:59.027Z",
+      "updatedAt": "2026-10-15T03:26:59.027Z"
+    },
+    {
+      "id": "proj_ecotrack",
+      "name": "EcoTrack - Smart Energy Monitor",
+      "description": "IoT sensor dashboard monitoring dorm electricity and carbon savings across university residential buildings.",
+      "ownerId": "user_maya",
+      "color": "teal",
+      "tag": "GREEN-IOT",
+      "members": [
+        {
+          "userId": "user_maya",
+          "role": "lead",
+          "joinedAt": "2026-10-01T03:26:59.027Z"
+        },
+        {
+          "userId": "user_alex",
+          "role": "member",
+          "joinedAt": "2026-10-03T03:26:59.027Z"
+        },
+        {
+          "userId": "user_liam",
+          "role": "member",
+          "joinedAt": "2026-10-05T03:26:59.027Z"
+        }
+      ],
+      "createdAt": "2026-10-01T03:26:59.027Z",
+      "updatedAt": "2026-10-15T03:26:59.027Z"
+    },
+    {
+      "id": "proj_studysphere",
+      "name": "StudySphere - Collaborative Notes",
+      "description": "Peer-to-peer study group notes sharing, flashcards and syllabus milestones for finals preparation.",
+      "ownerId": "user_liam",
+      "color": "green",
+      "tag": "STUDY-APP",
+      "members": [
+        {
+          "userId": "user_liam",
+          "role": "lead",
+          "joinedAt": "2026-10-05T03:26:59.027Z"
+        },
+        {
+          "userId": "user_alex",
+          "role": "member",
+          "joinedAt": "2026-10-07T03:26:59.027Z"
+        },
+        {
+          "userId": "user_sophia",
+          "role": "member",
+          "joinedAt": "2026-10-08T03:26:59.027Z"
+        }
+      ],
+      "createdAt": "2026-10-05T03:26:59.027Z",
+      "updatedAt": "2026-10-15T03:26:59.027Z"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task_ce_1",
+      "projectId": "proj_campuseats",
+      "title": "Design dining hall menu schema and allergy filter tags",
+      "description": "Define relational model for food items, calorie counts, vegetarian/vegan tags, and dining hall pickup lockers.",
+      "status": "completed",
+      "priority": "high",
+      "assigneeId": "user_maya",
+      "creatorId": "user_alex",
+      "dueDate": "2026-10-13",
+      "order": 0,
+      "tags": [
+        "Design",
+        "Database"
+      ],
+      "createdAt": "2026-09-30T03:26:59.027Z",
+      "updatedAt": "2026-10-12T03:26:59.027Z"
+    },
+    {
+      "id": "task_ce_2",
+      "projectId": "proj_campuseats",
+      "title": "Implement Student ID card payment & campus cash webhook",
+      "description": "Connect university payment gateway API and handle mock balance checks with simulated receipts.",
+      "status": "in_progress",
+      "priority": "urgent",
+      "assigneeId": "user_liam",
+      "creatorId": "user_alex",
+      "dueDate": "2026-10-17",
+      "order": 0,
+      "tags": [
+        "Backend",
+        "Payment",
+        "API"
+      ],
+      "createdAt": "2026-10-03T03:26:59.027Z",
+      "updatedAt": "2026-10-14T03:26:59.027Z"
+    },
+    {
+      "id": "task_ce_3",
+      "projectId": "proj_campuseats",
+      "title": "Build interactive cart & pickup time slot selector",
+      "description": "Create responsive mobile-first order review screen with 15-minute staggered batch pickup windows.",
+      "status": "in_progress",
+      "priority": "medium",
+      "assigneeId": "user_maya",
+      "creatorId": "user_alex",
+      "dueDate": "2026-10-19",
+      "order": 1,
+      "tags": [
+        "Frontend",
+        "UI/UX"
+      ],
+      "createdAt": "2026-10-05T03:26:59.027Z",
+      "updatedAt": "2026-10-14T03:26:59.027Z"
+    },
+    {
+      "id": "task_ce_4",
+      "projectId": "proj_campuseats",
+      "title": "Run end-to-end stress testing with 50 simulated orders",
+      "description": "Verify kitchen order board concurrency when peak lunch crowd hits between 12:00 PM and 1:30 PM.",
+      "status": "review",
+      "priority": "high",
+      "assigneeId": "user_sophia",
+      "creatorId": "user_liam",
+      "dueDate": "2026-10-18",
+      "order": 0,
+      "tags": [
+        "QA",
+        "Testing"
+      ],
+      "createdAt": "2026-10-07T03:26:59.027Z",
+      "updatedAt": "2026-10-14T03:26:59.027Z"
+    },
+    {
+      "id": "task_ce_5",
+      "projectId": "proj_campuseats",
+      "title": "Add push notification sounds for driver dispatch",
+      "description": "Provide audio chime and status badge pulse when dining hall staff marks an order \"Ready at Locker\".",
+      "status": "todo",
+      "priority": "low",
+      "assigneeId": "user_alex",
+      "creatorId": "user_maya",
+      "dueDate": "2026-10-22",
+      "order": 0,
+      "tags": [
+        "Audio",
+        "Notifications"
+      ],
+      "createdAt": "2026-10-09T03:26:59.027Z",
+      "updatedAt": "2026-10-09T03:26:59.027Z"
+    },
+    {
+      "id": "task_ce_6",
+      "projectId": "proj_campuseats",
+      "title": "Final college presentation slides & architectural diagrams",
+      "description": "Prepare 10-slide deck with component flowcharts, tech stack breakdown, and live demo guide.",
+      "status": "todo",
+      "priority": "high",
+      "assigneeId": "user_alex",
+      "creatorId": "user_alex",
+      "dueDate": "2026-10-21",
+      "order": 1,
+      "tags": [
+        "Demo",
+        "Presentation"
+      ],
+      "createdAt": "2026-10-11T03:26:59.027Z",
+      "updatedAt": "2026-10-11T03:26:59.027Z"
+    },
+    {
+      "id": "task_eco_1",
+      "projectId": "proj_ecotrack",
+      "title": "Configure ESP32 power consumption telemetry MQTT broker",
+      "description": "Stream wattage spikes from floor level circuit sub-meters into server ingestion pipeline.",
+      "status": "in_progress",
+      "priority": "high",
+      "assigneeId": "user_liam",
+      "creatorId": "user_maya",
+      "dueDate": "2026-10-18",
+      "order": 0,
+      "tags": [
+        "IoT",
+        "MQTT"
+      ],
+      "createdAt": "2026-10-06T03:26:59.027Z",
+      "updatedAt": "2026-10-15T03:26:59.027Z"
+    },
+    {
+      "id": "task_eco_2",
+      "projectId": "proj_ecotrack",
+      "title": "Draft green leaderboard badges for highest saving dorms",
+      "description": "Vector badges for top eco-friendly suites with gamification reward points.",
+      "status": "todo",
+      "priority": "medium",
+      "assigneeId": "user_maya",
+      "creatorId": "user_maya",
+      "dueDate": "2026-10-23",
+      "order": 0,
+      "tags": [
+        "Design",
+        "Gamification"
+      ],
+      "createdAt": "2026-10-10T03:26:59.027Z",
+      "updatedAt": "2026-10-15T03:26:59.027Z"
+    },
+    {
+      "id": "task_eco_3",
+      "projectId": "proj_ecotrack",
+      "title": "Calibrate baseline kWh consumption for North Quad Hall",
+      "description": "Aggregate historical weekend vs weekday data to highlight heating/cooling inefficiencies.",
+      "status": "completed",
+      "priority": "medium",
+      "assigneeId": "user_alex",
+      "creatorId": "user_maya",
+      "dueDate": "2026-10-11",
+      "order": 0,
+      "tags": [
+        "Analytics"
+      ],
+      "createdAt": "2026-10-04T03:26:59.027Z",
+      "updatedAt": "2026-10-15T03:26:59.027Z"
+    },
+    {
+      "id": "task_ss_1",
+      "projectId": "proj_studysphere",
+      "title": "Build Markdown notes editor with syntax highlighting",
+      "description": "Support code snippets, math equations, and checklist bullets for CS301 Algorithms class.",
+      "status": "review",
+      "priority": "high",
+      "assigneeId": "user_sophia",
+      "creatorId": "user_liam",
+      "dueDate": "2026-10-16",
+      "order": 0,
+      "tags": [
+        "Editor",
+        "Frontend"
+      ],
+      "createdAt": "2026-10-08T03:26:59.027Z",
+      "updatedAt": "2026-10-15T03:26:59.027Z"
+    },
+    {
+      "id": "task_ss_2",
+      "projectId": "proj_studysphere",
+      "title": "Spaced repetition flashcard algorithm (SM-2 implementation)",
+      "description": "Calculate review intervals based on user difficulty ratings 1 to 5.",
+      "status": "todo",
+      "priority": "medium",
+      "assigneeId": "user_liam",
+      "creatorId": "user_liam",
+      "dueDate": "2026-10-20",
+      "order": 0,
+      "tags": [
+        "Algorithm"
+      ],
+      "createdAt": "2026-10-12T03:26:59.027Z",
+      "updatedAt": "2026-10-15T03:26:59.027Z"
+    }
+  ],
+  "comments": [
+    {
+      "id": "comm_1",
+      "taskId": "task_ce_2",
+      "projectId": "proj_campuseats",
+      "userId": "user_alex",
+      "userName": "Alex Rivers",
+      "userAvatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80",
+      "content": "Tested the webhook endpoint with mock tokens, latency is under 45ms. Ready for the live demo run!",
+      "createdAt": "2026-10-14T03:26:59.027Z"
+    },
+    {
+      "id": "comm_2",
+      "taskId": "task_ce_2",
+      "projectId": "proj_campuseats",
+      "userId": "user_liam",
+      "userName": "Liam Vance",
+      "userAvatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
+      "content": "Awesome. I added graceful error states if someone has an insufficient campus balance.",
+      "createdAt": "2026-10-14T09:26:59.027Z"
+    },
+    {
+      "id": "comm_3",
+      "taskId": "task_ce_4",
+      "projectId": "proj_campuseats",
+      "userId": "user_sophia",
+      "userName": "Sophia Patel",
+      "userAvatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80",
+      "content": "Completed 30 virtual order cycles. All sockets and order badges synced accurately without dropouts.",
+      "createdAt": "2026-10-14T22:26:59.027Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif_1",
+      "userId": "user_alex",
+      "title": "New Comment on Payment Gateway",
+      "message": "Liam Vance commented on \"Implement Student ID card payment & campus cash webhook\"",
+      "type": "comment_added",
+      "read": false,
+      "link": "/project/proj_campuseats?task=task_ce_2",
+      "createdAt": "2026-10-14T09:26:59.027Z"
+    },
+    {
+      "id": "notif_2",
+      "userId": "user_alex",
+      "title": "QA Review Ready",
+      "message": "Sophia Patel moved \"Run end-to-end stress testing\" to Review",
+      "type": "status_changed",
+      "read": false,
+      "link": "/project/proj_campuseats?task=task_ce_4",
+      "createdAt": "2026-10-14T22:26:59.027Z"
+    },
+    {
+      "id": "notif_3",
+      "userId": "user_alex",
+      "title": "Upcoming Deadline Warning",
+      "message": "Payment Gateway task deadline is in 2 days.",
+      "type": "deadline_approaching",
+      "read": true,
+      "link": "/project/proj_campuseats?task=task_ce_2",
+      "createdAt": "2026-10-13T11:26:59.027Z"
+    },
+    {
+      "id": "notif_4",
+      "userId": "user_maya",
+      "title": "Task Assigned",
+      "message": "Alex Rivers assigned you \"Design dining hall menu schema and allergy filter tags\"",
+      "type": "task_assigned",
+      "read": true,
+      "link": "/project/proj_campuseats?task=task_ce_1",
+      "createdAt": "2026-09-30T03:26:59.027Z"
+    }
+  ],
+  "activities": [
+    {
+      "id": "act_1",
+      "projectId": "proj_campuseats",
+      "userId": "user_alex",
+      "userName": "Alex Rivers",
+      "action": "created project",
+      "targetTitle": "Campus Eats - Food Delivery",
+      "createdAt": "2026-09-25T03:26:59.027Z"
+    },
+    {
+      "id": "act_2",
+      "projectId": "proj_campuseats",
+      "userId": "user_alex",
+      "userName": "Alex Rivers",
+      "action": "assigned task",
+      "targetTitle": "Implement Student ID card payment",
+      "createdAt": "2026-10-03T03:26:59.027Z"
+    },
+    {
+      "id": "act_3",
+      "projectId": "proj_campuseats",
+      "userId": "user_maya",
+      "userName": "Maya Chen",
+      "action": "completed task",
+      "targetTitle": "Design dining hall menu schema",
+      "createdAt": "2026-10-12T03:26:59.027Z"
+    },
+    {
+      "id": "act_4",
+      "projectId": "proj_campuseats",
+      "userId": "user_sophia",
+      "userName": "Sophia Patel",
+      "action": "submitted review for",
+      "targetTitle": "Run end-to-end stress testing",
+      "createdAt": "2026-10-14T03:26:59.027Z"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "FlowSprint - Project & Team Management",
+  "description": "A modern, full-stack project management platform with real-time Kanban boards, task assignment, team collaboration, comments, notifications, and college project demo mode.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
